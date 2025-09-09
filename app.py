@@ -4,7 +4,6 @@ from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
 from dotenv import load_dotenv
 import dspy
-from dspy.clients import OpenAI
 
 # Load environment variables
 load_dotenv()
@@ -13,8 +12,7 @@ if not OPENAI_API_KEY:
     raise RuntimeError("Missing OPENAI_API_KEY in environment. Create a .env file or export it.")
 
 # Configure DSPy with OpenAI gpt-4o-mini
-#dspy.configure(lm=dspy.LM(model="openai/gpt-4o-mini", api_key=OPENAI_API_KEY))
-dspy.configure(lm=dspy.OpenAI(model="openai/gpt-4o-mini", api_key=OPENAI_API_KEY))
+dspy.configure(lm=dspy.LM(model="openai/gpt-4o-mini", api_key=OPENAI_API_KEY))
 
 # Define a simple chat signature for DSPy
 class ChatTurn(dspy.Signature):
