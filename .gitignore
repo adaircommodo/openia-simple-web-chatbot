@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtualenv
+venv/
+env/
+.venv/
+
+# Arquivo de variáveis de ambiente
+.env
+
+# Flask / logs / debug
+instance/
+*.log
+
+# VSCode / IDEs
+.vscode/
+.idea/
+*.swp
