@@ -30,6 +30,8 @@ Este projeto implementa um **chatbot flutuante** para websites utilizando **Pyth
 │   ├─ 📝 clientes.json
 │   ├─ 🖼 chat_screenshot.png
 │   └─ 🎞 chat_demo.gif
+├─ 🐳 Dockerfile
+└─ 🐳 docker-compose.yml
 ```
 
 ---
@@ -39,15 +41,16 @@ Este projeto implementa um **chatbot flutuante** para websites utilizando **Pyth
 - Python 3.10+
 - Conta OpenAI com chave API
 - Pip ou pipenv para instalar dependências
+- Docker e Docker Compose (para rodar em container)
 
 ---
 
-## Instalação
+## Instalação (local)
 
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/adaircommodo/flask_dspy_chatbot.git
+git clone https://github.com/SEU_USUARIO/flask_dspy_chatbot.git
 cd flask_dspy_chatbot
 ```
 
@@ -71,15 +74,35 @@ pip install -r requirements.txt
 OPENAI_API_KEY=coloque_sua_chave_aqui
 ```
 
+5. Coloque arquivos `.txt` ou `.json` na pasta `docs/` com informações que o chatbot deve usar (opcional).
+
 ---
 
-## Executando o Servidor
+## Executando o Servidor (local)
 
 ```bash
 python app.py
 ```
 
 Abra [http://localhost:5000](http://localhost:5000) no navegador.
+
+---
+
+## Executando com Docker
+
+1. Crie o arquivo `.env` na raiz do projeto:
+
+```env
+OPENAI_API_KEY=coloque_sua_chave_aqui
+```
+
+2. Construa e suba o container:
+
+```bash
+docker-compose up --build
+```
+
+3. Acesse [http://localhost:5000](http://localhost:5000)
 
 ---
 
@@ -97,6 +120,7 @@ Abra [http://localhost:5000](http://localhost:5000) no navegador.
 - DSPy
 - OpenAI GPT-4o-mini
 - HTML, CSS e JS
+- Docker / Docker Compose
 
 ---
 
@@ -110,3 +134,4 @@ MIT
 
 
 Abra uma **issue** no GitHub ou me contate pelo perfil do GitHub para dúvidas ou sugestões.
+
